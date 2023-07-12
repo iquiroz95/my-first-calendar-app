@@ -2,8 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 110%;
 }
 /* Choosing a font */
+
+body{
+    display: flex;
+    align-items: left;
+    padding: 0;
+    justify-content: left;
+    min-height: 50vh;
+    background: #27285C;
+/* googled this pretty cool color */
+
+}
+
+  .months{
+    justify-content: center;
+  }
+
+  header{
+    margin: 10px;
+    padding: 15px;
+    border: 10px solid #F0E68C;
+    border-radius: 30px;
+    background-color: #27285C;
+    color: antiquewhite; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 30px;
+  }
+
+#new-entry{
+  background-color: #FFD700;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+}
+
 
