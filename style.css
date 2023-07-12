@@ -1,36 +1,40 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 110%;
-}
+
 /* Choosing a font */
 
 body{
-    display: flex;
-    align-items: left;
-    padding: 0;
-    justify-content: left;
-    min-height: 50vh;
     background: #27285C;
 /* googled this pretty cool color */
 
 }
 
-  .months{
-    justify-content: center;
-  }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
 
   header{
-    margin: 10px;
-    padding: 15px;
-    border: 10px solid #F0E68C;
-    border-radius: 30px;
-    background-color: #27285C;
-    color: antiquewhite; 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 10px solid #F0E68C;
+  border-radius: 30px;
+  background-color: #27285C;
+  color: white;
+  width: 45%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 30px;  
   }
 
 #new-entry{
@@ -40,7 +44,56 @@ body{
   padding: 15px;
   color: white;
   font-size: 25px;
-  margin: 10px;
+  margin: 35px;
 }
 
+.symbols{
+  background-color:black;
+  font-size: 25px;
+  margin: 15px;
+  color: white;
+}
 
+.calendar {
+  justify-content: right;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 10px solid black;
+  padding: 10px;
+  width: 350px; /* Adjust the width as needed */
+}
+
+.months {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}  
+
+.weeks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.days li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+}
