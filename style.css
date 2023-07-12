@@ -1,81 +1,79 @@
 
 /* Choosing a font */
 
-body{
-    background: #27285C;
-/* googled this pretty cool color */
-
+body {
+  background: #27285C;
 }
-
 
 .container {
   display: flex;
-  justify-content: space-between;
 }
 
-.hero {
-  display: flex;
-  justify-content: left;
-  align-items: flex-start;
-}
-
-  header{
+header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin: 10px;
   padding: 15px;
   box-sizing: border-box;
-  border: 10px solid #F0E68C;
+  border: 10px solid white;
   border-radius: 30px;
   background-color: #27285C;
   color: white;
-  width: 45%;
+  width: 15%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-  font-size: 30px;  
-  }
-
-#new-entry{
-  background-color: #FFD700;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  border-radius: 15px;
-  padding: 15px;
-  color: white;
-  font-size: 25px;
-  margin: 35px;
+  font-size: 30px;
 }
 
-.symbols{
-  background-color:black;
-  font-size: 25px;
-  margin: 15px;
+#new-entry {
+  background-color: #FFD700;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius: 10px;
+  padding: 10px;
   color: white;
+  font-size: 25px;
+  margin: 25px;
+}
+
+.symbols {
+  background-color: white;
+  font-size: 20px;
+  margin: 20px;
+  color: black;
+  border-radius: 5px;
 }
 
 .calendar {
-  justify-content: right;
+  flex-grow: 1;
   flex-direction: column;
   align-items: flex-start;
   border: 10px solid black;
   padding: 10px;
-  width: 350px; /* Adjust the width as needed */
+  background-color: #F0E68C;
+  width: 390px; /* Adjusting the width */
 }
 
 .months {
   list-style: none;
-  margin: 0;
+  margin: 10px;
   padding: 0;
+  background-color: white;
+  text-align: center;
+  font-size: 45px;
+  color: Black;
+  border-radius: 5px;
 }  
 
-.weeks {
+.weeks li {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
 }
 
 .days {
@@ -92,8 +90,114 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: white;
   width: 40px;
   height: 40px;
-  border: 1px solid #000;
+  border: 5px solid black; /* Corrected */
+  border-radius: 15%;
+  font-size: 20px;
+}
+
+.icons {
+  justify-content: flex-end;
+  display: flex;
+  margin: 5px;
+}
+
+.week {
+  list-style: none;
+  margin: 1px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 125%;
+}
+
+.week li {
+  flex: 2;
+  margin: 9px;
+}
+
+.current-date {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.days li:hover {
+  background-color: #FFD700;
+  color: white;
+}
+
+.days li.current-date {
+  background-color: #FFD700;
+  color: white;
+  margin: 95px;
+}
+
+
+.entry-list.show {
+  display: block;
+}
+
+.entry-list li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.entry-list li:hover {
+  background-color: #FFD700;
+  border-radius: 15px;
+}
+
+.entry-list {
+  background-color: #FFF;
+}
+
+.has-note {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+#notes-section {
+  width: 30%;
+  padding: 20px;
+  background-color: #F0E68C;
+}
+
+.note {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #F0E68C;
+  border-radius: 5px;px black; 
+}
+
+.note p {
+  margin: 0;
+  font-size: 16px;
+  color: #333333;
+}
+
+.note-date {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.note-time {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+h2{
+  display: left;
+  border-color: #FFF;
+  border-radius: 15px;
+  border: 55px black;
+}
+
+.notes-list {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #F0E68C;
 }
