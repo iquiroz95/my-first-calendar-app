@@ -89,18 +89,18 @@ document.addEventListener("DOMContentLoaded", function() {
       // Add the closeList() function to the day item click event listener
       daysList.addEventListener("click", handleDayItemClick);
       
+      // Function to handle day item click
       function handleDayItemClick(event) {
-        // Get the day item that was clicked
+    // Get the day item that was clicked
         const dayItem = event.target;
-      
-        // Check if the notes list is currently open
-        if (notesList.classList.contains("show")) {
-          // Close the notes list
-          closeList();
-        } else {
-          // Do nothing
-        }
-      }
+  
+    // Call the resetNotes() function
+        resetNotes(dayItem);
+  
+    // Toggle the visibility of the entry list
+        entryList.classList.toggle("show");
+  }
+  
     // Function to handle the "Back" button click
     function handleBackButtonClick() {
       if (currentMonthIndex > 0) {
@@ -216,18 +216,20 @@ document.addEventListener("DOMContentLoaded", function() {
     forwardButton.addEventListener("click", handleForwardButtonClick);
     backButton.addEventListener("click", handleBackButtonClick);
   
-    // Display the initial month and update the days
+    // Display the initial month and update the days?
     displayCurrentMonth();
     updateDays();
   
-    // Highlight today's date
+    // Highlight today's date?
     if (currentDateItem) {
       currentDateItem.classList.add("current-date");
     }
+
+    
     
     
 
-      // Attach the resetNotes() function to the day item click event
+      // Attaching the resetNotes() function to the day item click event
       dayItem.addEventListener("click", resetNotes);
       dayItem.addEventListener("click", handleDayItemClick)
   });
